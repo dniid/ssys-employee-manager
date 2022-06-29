@@ -1,7 +1,7 @@
 # 📱 SSYS Employee Manager App 👨🏻‍💼
 <font size="3">**A Simple CRUD API to manage employees**</font> 
 
-Welcome to the SSYS Employee Manager repository.
+Welcome to the SSYS Employee Manager repository.  
 This document is meant to solve a technical challenge made by SSYS.
 
 ## 🔨 Usage
@@ -24,8 +24,8 @@ Now you may access the API with your preferred method (such as [Postman], for ex
 ## 📞 API Requests
 
 #### Employees CRUD:
-* GET: /employees/ (employee list)
-* POST: /employees/ (employee create)
+* GET /employees/ (employee list)
+* POST /employees/ (employee create)
 * UPDATE /employees/ID/ (employee update)
 * DELETE /employees/ID/ (employee delete)
 * GET /employees/ID/ (employee detail)
