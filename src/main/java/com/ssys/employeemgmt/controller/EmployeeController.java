@@ -18,16 +18,19 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    //Employee List
     @GetMapping
     public List<Employee> getAllEmployees(){
         return employeeRepository.findAll();
     }
 
+    //Employee Create
     @PostMapping
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeRepository.save(employee);
     }
 
+    //Employee Details
     @GetMapping("{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable  long id){
         Employee employee = employeeRepository.findById(id)
@@ -35,6 +38,7 @@ public class EmployeeController {
         return ResponseEntity.ok(employee);
     }
 
+    //Employee Update
     @PutMapping("{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable long id,@RequestBody Employee employeeDetails) {
         Employee updateEmployee = employeeRepository.findById(id)
@@ -51,6 +55,7 @@ public class EmployeeController {
         return ResponseEntity.ok(updateEmployee);
     }
 
+    //Employee Delete
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id){
 
