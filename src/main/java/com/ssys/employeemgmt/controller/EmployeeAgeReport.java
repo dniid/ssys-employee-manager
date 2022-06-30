@@ -5,15 +5,17 @@ import com.ssys.employeemgmt.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
-
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/reports/employees/age")
 public class EmployeeAgeReport {
 
+    private final EmployeeRepository employeeRepository;
+
     @Autowired
-    private EmployeeRepository employeeRepository;
+    public EmployeeAgeReport(EmployeeRepository employeeRepository){
+        this.employeeRepository = employeeRepository;
+    }
 
     @GetMapping
     public EmployeeAge getAgeReport(){

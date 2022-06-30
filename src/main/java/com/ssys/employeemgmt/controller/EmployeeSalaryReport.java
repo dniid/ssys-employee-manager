@@ -5,6 +5,7 @@ import com.ssys.employeemgmt.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.Collections;
 
 @CrossOrigin("*")
@@ -12,8 +13,12 @@ import java.util.Collections;
 @RequestMapping("/reports/employees/salary")
 public class EmployeeSalaryReport {
 
+    private final EmployeeRepository employeeRepository;
+
     @Autowired
-    private EmployeeRepository employeeRepository;
+    public EmployeeSalaryReport(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
 
     @GetMapping
     public EmployeeSalary getSalaryReport(){
