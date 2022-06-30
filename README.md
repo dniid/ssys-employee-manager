@@ -43,7 +43,8 @@ Now you may access the API with your preferred method (such as [Postman], for ex
 <br><br><br>
 <font size="4">**Obs:** To get access to the API requests you need to specify the authorization token "AUTH_API_KEY" as "ssys" in the header. </font>
 <br>
-*Authorization acess in Postman*
+*Authorization Key demonstration in Postman*
+<br>
 ![Authorization Key demonstration in Postman](https://cdn.discordapp.com/attachments/531312380559491075/992211499290464346/unknown.png "Authorization Key demonstration in Postman")
 <br>
 ## 📞 API Requests
