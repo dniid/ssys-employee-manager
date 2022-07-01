@@ -5,9 +5,6 @@ import com.ssys.employeemgmt.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
-import java.util.Collections;
-
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/reports/employees/salary")

@@ -21,8 +21,8 @@ public class EmployeeLoader {
     }
 
     private void LoadBaseEmployees() throws ParseException {
-        employeeRepository.save(new Employee(1, "Anakin Skywalker", "skywalker@ssys.com.br", "Architecture", 4000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1983")));
-        employeeRepository.save(new Employee(2, "Obi-Wan Kenobi", "kenobi@ssys.com.br", "Back-End", 3000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1977")));
-        employeeRepository.save(new Employee(3, "Leia Organa", "organa@ssys.com.br", "DevOps", 5000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1980")));
+        employeeRepository.save(new Employee(1L, "Anakin Skywalker", "skywalker@ssys.com.br", "Architecture", 4000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1983")));
+        employeeRepository.save(new Employee(2L, "Obi-Wan Kenobi", "kenobi@ssys.com.br", "Back-End", 3000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1977")));
+        employeeRepository.save(new Employee(3L, "Leia Organa", "organa@ssys.com.br", "DevOps", 5000.00, new SimpleDateFormat("dd-MM-yyyy").parse("01-01-1980")));
     }
 }

@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
 import java.util.List;
 
 @CrossOrigin("*")
@@ -36,7 +35,7 @@ public class EmployeeController {
     }
 
     //Employee Details
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable  long id){
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee with id: " + id + " does not exist."));
@@ -44,7 +43,7 @@ public class EmployeeController {
     }
 
     //Employee Update
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable long id,@RequestBody Employee employeeDetails) {
         Employee updateEmployee = employeeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee with id: " + id + " does not exist."));
@@ -61,7 +60,7 @@ public class EmployeeController {
     }
 
     //Employee Delete
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id){
 
         Employee employee = employeeRepository.findById(id)
